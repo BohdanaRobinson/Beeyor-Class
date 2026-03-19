@@ -38,3 +38,8 @@
 // </div>
 
 //  //div[@class='actions']/button[normalize-space(text())='Delete')];
+
+
+const person : string = "g"
+// function that sorts numbers array
+function sortArray(arr: number[]): number[] {

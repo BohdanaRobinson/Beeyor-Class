@@ -19,5 +19,16 @@ test(
 
     //5. Input password
     await loginPage.inputPassword("Default1!");
+
+    //6. Click login button and get myAccountPage;
+    const myAccountPage = await loginPage.clickLoginButton();
+
+    //7. Wait until myAccountPage is loaded
+    await myAccountPage.waitUntilPageIsLoaded();
+
+    //8.Get log out text
+    const logOutText = await myAccountPage.getLogOutText();
+    //9Verify login was succesful and log out text is visible
+    expect(logOutText).toBe("Log out");
   },
 );
